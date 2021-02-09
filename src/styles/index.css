@@ -3,15 +3,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 4rem;
 }
 
 .list-item-wrapper {
-    padding: .3rem;
+    padding: .5rem;
+}
+
+body {
+    background: #282c34;
 }
 
 a {
     text-decoration: none;
-    color: #282c34;
+    color: #fff;
     font-family: "Arial", sans-serif;
 }
 
