@@ -6,11 +6,16 @@ export default function StartPage() {
     const [listItems, setListItems] = useState([])
 
     useEffect(() => {
-        setListItems(getFeeds());
+        getFeedsData();
     }, [setListItems]);
 
+    async function getFeedsData(){
+        setListItems(await getFeeds());
+    }
 
-    return (<div className="list-wrapper">{listItems && listItems.map((item, index) => <div className="list-item-wrapper"><a href={item.link} key={index}>{item.title}</a></div>)}</div>)
+    return (
+        <div className="list-wrapper">{!!listItems.length && listItems.map((item, index) => <div
+            className="list-item-wrapper" key={index}><a href={item.link} >{item.title}</a></div>)}</div>)
 
 
 }
