@@ -1,29 +1,16 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started
 
 ## Setup
-Because of the cors issues we get in local development, go to https://cors-anywhere.herokuapp.com/corsdemo
+Because of the cors issues we get in local development, enable proxy by going to https://cors-anywhere.herokuapp.com/corsdemo
 and request temporary access.
 
-Then run yarn or npm install in root
+### to install `yarn` or `npm install` in root
+### to start `yarn start` or `npm start` in root 
 
-Then yarn start or npm start
+## Design/Scope decisions
+I decided not to use a global state but rather only update the components local state,
+as the application is now with no more than one page a more complex state seemed like overkill.
 
-### `yarn start` 
+I did decide to use axios instead of fetch method for readability and code cleanliness.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](https://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I did decide not to implement a server since there were no need for handling high data load.

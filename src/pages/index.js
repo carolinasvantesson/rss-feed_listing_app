@@ -7,7 +7,7 @@ export default function StartPage() {
 
     useEffect(() => {
         getFeedsData();
-    }, [setListItems]);
+    }, []);
 
     async function getFeedsData(){
         setListItems(await getFeeds());
